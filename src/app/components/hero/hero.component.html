@@ -1,0 +1,157 @@
+<section
+  id="home"
+  class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden"
+>
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div
+      class="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-pulse"
+    ></div>
+    <div
+      class="absolute top-40 right-20 w-24 h-24 bg-purple-400/20 rounded-full blur-xl animate-pulse"
+      style="animation-delay: 1s"
+    ></div>
+    <div
+      class="absolute bottom-40 left-1/4 w-40 h-40 bg-indigo-400/10 rounded-full blur-2xl animate-pulse"
+      style="animation-delay: 2s"
+    ></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="text-center lg:text-left space-y-8">
+        <!-- Status badge -->
+        <div class="flex justify-center lg:justify-start">
+          <div
+            class="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 backdrop-blur-sm border border-white/20 text-blue-700 px-6 py-3 rounded-full text-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span>Available for Freelance</span>
+            <lucide-icon
+              [img]="sparklesIcon"
+              size="16"
+              class="text-blue-600"
+            ></lucide-icon>
+          </div>
+        </div>
+
+        <!-- Main heading -->
+        <div class="space-y-6">
+          <h1
+            class="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight"
+          >
+            Hi, I'm
+            <span
+              class="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse"
+            >
+              Shantanu
+            </span>
+            <br />
+            <span class="text-4xl lg:text-6xl text-gray-700">Dutta</span>
+          </h1>
+
+          <div class="space-y-4">
+            <h2
+              class="text-2xl lg:text-3xl font-semibold text-gray-800 flex items-center justify-center lg:justify-start space-x-3"
+            >
+              <lucide-icon
+                [img]="codeIcon"
+                size="28"
+                class="text-blue-600"
+              ></lucide-icon>
+              <span>Full-Stack Developer</span>
+            </h2>
+            <h3
+              class="text-xl lg:text-2xl text-gray-600 flex items-center justify-center lg:justify-start space-x-3"
+            >
+              <lucide-icon
+                [img]="zapIcon"
+                size="24"
+                class="text-purple-600"
+              ></lucide-icon>
+              <span>Angular & .NET Specialist</span>
+            </h3>
+          </div>
+
+          <p class="text-lg lg:text-xl text-gray-700 max-w-2xl leading-relaxed">
+            Passionate software developer working in the IT industry since 2022,
+            creating
+            <span class="font-semibold text-blue-600">efficient</span> and
+            <span class="font-semibold text-purple-600"
+              >scalable applications</span
+            >
+            with modern technologies.
+          </p>
+        </div>
+
+        <!-- CTA buttons -->
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-4"
+        >
+          <button
+            (click)="scrollToSection('projects')"
+            class="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3"
+          >
+            <span>View Projects</span>
+            <lucide-icon
+              [img]="arrowRightIcon"
+              size="24"
+              class="group-hover:translate-x-2 transition-transform duration-300"
+            ></lucide-icon>
+          </button>
+
+          <button
+            (click)="scrollToSection('contact')"
+            class="border-2 border-gray-300 hover:border-transparent bg-white/70 backdrop-blur-sm text-gray-700 hover:text-white px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:shadow-xl transform hover:scale-105"
+          >
+            Get in Touch
+          </button>
+        </div>
+
+        <!-- Tech stack -->
+        <div class="flex flex-wrap gap-3 justify-center lg:justify-start pt-6">
+          <span
+            *ngFor="let tech of techStack"
+            class="px-4 py-2 bg-white/60 backdrop-blur-sm border border-white/30 rounded-full text-sm font-medium text-gray-700 hover:bg-gradient-to-r hover:from-blue-100 hover:to-purple-100 hover:text-blue-700 transition-all duration-300 hover:scale-105 cursor-default"
+          >
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Profile section -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative group">
+          <div
+            class="w-96 h-96 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-indigo-600 p-2 shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:scale-105"
+          >
+            <div
+              class="w-full h-full rounded-full bg-gradient-to-br from-gray-50 to-white flex items-center justify-center text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-600 to-purple-600 shadow-inner"
+            >
+              SD
+            </div>
+          </div>
+
+          <!-- Floating elements -->
+          <div
+            class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-default"
+          >
+            <span class="text-3xl">👋</span>
+          </div>
+
+          <div
+            class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-default"
+          >
+            <span class="text-2xl">💻</span>
+          </div>
+
+          <div
+            class="absolute top-1/2 -left-8 w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-default"
+          >
+            <span class="text-xl">⚡</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

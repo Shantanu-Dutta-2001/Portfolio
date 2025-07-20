@@ -1,0 +1,68 @@
+<section id="skills" class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Skills & Services
+      </h2>
+      <div
+        class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"
+      ></div>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        I am available for freelance projects in web development, API
+        integrations, and software solutions.
+      </p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="mb-20">
+      <h3 class="text-2xl font-semibold text-center text-gray-900 mb-12">
+        Technical Skills
+      </h3>
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div
+          *ngFor="let category of skillCategories"
+          class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20"
+        >
+          <h4 class="text-xl font-semibold text-gray-900 mb-6">
+            {{ category.title }}
+          </h4>
+          <div class="space-y-4">
+            <div *ngFor="let skill of category.skills">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">{{ skill.name }}</span>
+                <span class="text-sm text-gray-500">{{ skill.level }}%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div
+                  class="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                  [style.width.%]="animatedLevels[skill.name] || 0"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div>
+      <h3 class="text-2xl font-semibold text-center text-gray-900 mb-12">
+        Services I Offer
+      </h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          *ngFor="let service of services"
+          class="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300"
+        >
+          <div class="text-4xl mb-4">{{ service.icon }}</div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-3">
+            {{ service.title }}
+          </h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            {{ service.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

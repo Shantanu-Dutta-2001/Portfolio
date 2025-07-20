@@ -1,0 +1,110 @@
+<header
+  class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-white/20"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div
+        class="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+      >
+        Shantanu Dutta
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <button
+          (click)="scrollToSection('home')"
+          class="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          Home
+        </button>
+        <button
+          (click)="scrollToSection('about')"
+          class="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          About
+        </button>
+        <button
+          (click)="scrollToSection('skills')"
+          class="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          Skills
+        </button>
+        <button
+          (click)="scrollToSection('projects')"
+          class="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          Projects
+        </button>
+        <button
+          (click)="scrollToSection('contact')"
+          class="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        >
+          Contact
+        </button>
+      </nav>
+
+      <!-- <div class="hidden md:flex items-center space-x-4">
+        <button
+          class="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+        >
+          <lucide-icon [img]="downloadIcon" size="16"></lucide-icon>
+          <span>Resume</span>
+        </button>
+      </div> -->
+
+      <!-- Mobile menu button -->
+      <button (click)="toggleMenu()" class="md:hidden p-2 text-gray-700">
+        <lucide-icon
+          [img]="isMenuOpen ? xIcon : menuIcon"
+          size="24"
+        ></lucide-icon>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      *ngIf="isMenuOpen"
+      class="md:hidden absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-white/20"
+    >
+      <nav class="px-4 py-4 space-y-3">
+        <button
+          (click)="scrollToSection('home')"
+          class="block w-full text-left text-gray-700 hover:text-blue-600 py-2"
+        >
+          Home
+        </button>
+        <button
+          (click)="scrollToSection('about')"
+          class="block w-full text-left text-gray-700 hover:text-blue-600 py-2"
+        >
+          About
+        </button>
+        <button
+          (click)="scrollToSection('skills')"
+          class="block w-full text-left text-gray-700 hover:text-blue-600 py-2"
+        >
+          Skills
+        </button>
+        <button
+          (click)="scrollToSection('projects')"
+          class="block w-full text-left text-gray-700 hover:text-blue-600 py-2"
+        >
+          Projects
+        </button>
+        <button
+          (click)="scrollToSection('contact')"
+          class="block w-full text-left text-gray-700 hover:text-blue-600 py-2"
+        >
+          Contact
+        </button>
+        <!-- <button
+          class="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium w-full justify-center mt-4"
+        >
+          <lucide-icon [img]="downloadIcon" size="16"></lucide-icon>
+          <span>Resume</span>
+        </button> -->
+      </nav>
+    </div>
+  </div>
+</header>
+<p>header works!</p>
